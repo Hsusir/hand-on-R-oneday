@@ -1,12 +1,12 @@
 ---
 title: "手把手R語言一日初階實作"
 author: "許sir"
-date: "2019/9/5"
+date: "2019/10/5"
 output: 
   html_document:
     toc: true
     toc_depth: 2
-    toc_float:
+    toc_float: 
       collapsed: false
       smooth_scroll: false
 ---
@@ -296,6 +296,10 @@ library(ggcorrplot)
 ```
 ```{r}
 iris2=iris[,1:4]
+
+corr<-cor(iris2)
+corr
+ggcorrplot(corr, lab = TRUE, type = "lower", method="circle")
 ```
 
 
